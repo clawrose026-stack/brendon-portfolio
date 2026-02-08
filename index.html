@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brendon Clark | Software Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="#" class="logo">BC</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact" class="nav-cta">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Menu">
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-eyebrow">Software Developer</div>
+            <h1 class="hero-title">
+                <span class="line">Brendon</span>
+                <span class="line accent">Clark</span>
+            </h1>
+            <p class="hero-subtitle">
+                Crafting robust solutions in Java, Spring Boot & modern web technologies. 
+                Award-winning developer with 7+ years building enterprise applications 
+                for banking and insurance sectors.
+            </p>
+            <div class="hero-cta">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-outline">Get In Touch</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">7+</span>
+                    <span class="stat-label">Years Experience</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">3</span>
+                    <span class="stat-label">Major Companies</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">WOW</span>
+                    <span class="stat-label">Award Winner</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="code-window">
+                <div class="code-header">
+                    <div class="dot red"></div>
+                    <div class="dot yellow"></div>
+                    <div class="dot green"></div>
+                    <span class="filename">Developer.java</span>
+                </div>
+                <div class="code-content">
+                    <pre><code><span class="keyword">public class</span> <span class="class-name">BrendonClark</span> <span class="keyword">extends</span> <span class="class-name">Developer</span> {
+    
+    <span class="keyword">private</span> String passion = <span class="string">"Building scalable solutions"</span>;
+    <span class="keyword">private</span> String location = <span class="string">"Johannesburg, SA"</span>;
+    
+    <span class="keyword">public</span> <span class="method">deliver</span>() {
+        <span class="keyword">return</span> <span class="string">"Exceeds Expectations"</span>;
+    }
+}</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">01 — About</span>
+                <h2 class="section-title">Code is my craft.<br>Impact is my goal.</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p class="lead">
+                        I'm a Johannesburg-based software developer specializing in enterprise 
+                        Java applications, with deep experience in banking and insurance systems.
+                    </p>
+                    <p>
+                        Currently at FNB Life Insurance, I lead omni-channel development across 
+                        mobile, web, branch, and assisted channels. Previously, I built CRM/ERP 
+                        solutions at Altron NuPay and enterprise systems at Transaction Capital.
+                    </p>
+                    <p>
+                        My approach combines technical excellence with business understanding — 
+                        whether it's architecting a funeral refresh app or implementing 
+                        complex payroll systems, I deliver solutions that exceed expectations.
+                    </p>
+                    <div class="about-details">
+                        <div class="detail">
+                            <span class="detail-label">Based In</span>
+                            <span class="detail-value">Greymont, Johannesburg</span>
+                        </div>
+                        <div class="detail">
+                            <span class="detail-label">Education</span>
+                            <span class="detail-value">BSc Computer Science</span>
+                        </div>
+                        <div class="detail">
+                            <span class="detail-label">Availability</span>
+                            <span class="detail-value">Full-time / Freelance</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual">
+                    <div class="experience-card">
+                        <div class="card-header">
+                            <span class="card-icon">★</span>
+                            <span class="card-badge">2024</span>
+                        </div>
+                        <h3 class="card-title">WOW Award Winner</h3>
+                        <p class="card-text">Annual Employee Recognition</p>
+                        <div class="card-divider"></div>
+                        <p class="card-subtext">Rated "Exceeds Expectations"</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">02 — Experience</span>
+                <h2 class="section-title">Professional Journey</h2>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-title-group">
+                                <h3 class="timeline-title">Java Developer</h3>
+                                <span class="timeline-company">FNB Life Insurance, Sandton</span>
+                            </div>
+                            <span class="timeline-date">Nov 2022 – Present</span>
+                        </div>
+                        <p class="timeline-desc">
+                            Leading omni-channel development across Mobile App, Online, Branch, 
+                            and Assisted channels. Delivering high-impact projects including 
+                            Funeral Refresh App, Life & Legacy Plan, and Funeral Cover USSD systems.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Spring Boot</span>
+                            <span class="tag">Omni-channel</span>
+                            <span class="tag">Mobile</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-title-group">
+                                <h3 class="timeline-title">Software Developer</h3>
+                                <span class="timeline-company">Altron NuPay, Alberton</span>
+                            </div>
+                            <span class="timeline-date">2020 – 2021</span>
+                        </div>
+                        <p class="timeline-desc">
+                            Developed CRM/ERP solutions using OFBIZ Framework. Implemented 
+                            Debicheck payment processing systems and integrated enterprise 
+                            business workflows.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">OFBIZ</span>
+                            <span class="tag">CRM/ERP</span>
+                            <span class="tag">Debicheck</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-header">
+                            <div class="timeline-title-group">
+                                <h3 class="timeline-title">Software Developer</h3>
+                                <span class="timeline-company">Transaction Capital, Sandton</span>
+                            </div>
+                            <span class="timeline-date">2017 – 2020</span>
+                        </div>
+                        <p class="timeline-desc">
+                            Built bespoke software solutions including Employee Self-Service portals, 
+                            Payroll systems, and Access Management platforms. Delivered robust 
+                            enterprise-grade applications.
+                        </p>
+                        <div class="timeline-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Enterprise</span>
+                            <span class="tag">Payroll</span>
+                            <span class="tag">Access Control</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">03 — Skills</span>
+                <h2 class="section-title">Technical Arsenal</h2>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <div class="category-header">
+                        <span class="category-number">01</span>
+                        <h3 class="category-title">Backend</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-name">Java</span>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 95%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Spring Boot</span>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 90%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">JSP</span>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 88%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Python</span>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 75%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">SQL</span>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 92%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-header">
+                        <span class="category-number">02</span>
+                        <h3 class="category-title">Frontend</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-name">JavaScript</span>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">HTML/CSS</span>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 90%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Tailwind CSS</span>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 82%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">SASS</span>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 80%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Bootstrap</span>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <div class="category-header">
+                        <span class="category-number">03</span>
+                        <h3 class="category-title">Additional</h3>
+                    </div>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <span class="skill-name">C# / .NET</span>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 70%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">C++</span>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 65%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Delphi</span>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 60%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">XML</span>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <span class="skill-name">Objective-C</span>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 55%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category platforms">
+                    <div class="category-header">
+                        <span class="category-number">04</span>
+                        <h3 class="category-title">Platforms & Tools</h3>
+                    </div>
+                    <div class="platform-tags">
+                        <span class="platform-tag">OFBIZ Framework</span>
+                        <span class="platform-tag">CRM Systems</span>
+                        <span class="platform-tag">ERP Solutions</span>
+                        <span class="platform-tag">Debicheck</span>
+                        <span class="platform-tag">Payroll Systems</span>
+                        <span class="platform-tag">Access Management</span>
+                        <span class="platform-tag">Omni-channel</span>
+                        <span class="platform-tag">USSD</span>
+                        <span class="platform-tag">Mobile Apps</span>
+                        <span class="platform-tag">Git</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">04 — Projects</span>
+                <h2 class="section-title">Recent Work</h2>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card featured">
+                    <div class="project-content">
+                        <span class="project-year">2025</span>
+                        <h3 class="project-title">Funeral Refresh App</h3>
+                        <p class="project-desc">
+                            Comprehensive servicing application for funeral policy management. 
+                            Streamlined customer service workflows across multiple channels.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Spring Boot</span>
+                            <span class="tag">Omni-channel</span>
+                        </div>
+                    </div>
+                    <div class="project-visual">
+                        <div class="project-icon">🔄</div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <span class="project-year">2024</span>
+                        <h3 class="project-title">Life & Legacy Plan</h3>
+                        <p class="project-desc">
+                            Sales platform for life insurance products. Integrated customer 
+                            onboarding and policy issuance workflows.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Java</span>
+                            <span class="tag">Sales</span>
+                            <span class="tag">Integration</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <span class="project-year">2022</span>
+                        <h3 class="project-title">Funeral Cover USSD</h3>
+                        <p class="project-desc">
+                            USSD-based sales channel for funeral cover products. Enabled 
+                            accessible insurance purchasing for all customers.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">USSD</span>
+                            <span class="tag">Mobile</span>
+                            <span class="tag">Java</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-content">
+                        <span class="project-year">2020</span>
+                        <h3 class="project-title">Debicheck Integration</h3>
+                        <p class="project-desc">
+                            Payment processing system integration for authenticated debit orders. 
+                            Built on OFBIZ framework.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">OFBIZ</span>
+                            <span class="tag">Payments</span>
+                            <span class="tag">ERP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-eyebrow">05 — Education</span>
+                <h2 class="section-title">Academic Background</h2>
+            </div>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="edu-icon">🎓</div>
+                    <div class="edu-content">
+                        <h3 class="edu-degree">BSc Computer Science & Informatics</h3>
+                        <span class="edu-school">University of Johannesburg</span>
+                        <span class="edu-year">2013 – 2016</span>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <div class="edu-icon">📚</div>
+                    <div class="edu-content">
+                        <h3 class="edu-degree">National Senior Certificate</h3>
+                        <span class="edu-school">Edenvale High School</span>
+                        <span class="edu-year">Class of 2012</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-content">
+                    <span class="section-eyebrow">06 — Contact</span>
+                    <h2 class="section-title">Let's Build Something Together</h2>
+                    <p class="contact-text">
+                        I'm always interested in hearing about new projects and opportunities. 
+                        Whether you have a question or just want to say hi, feel free to reach out.
+                    </p>
+                    <div class="contact-details">
+                        <a href="mailto:Brendonclark4@gmail.com" class="contact-item">
+                            <span class="contact-icon">✉</span>
+                            <div class="contact-info">
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">Brendonclark4@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="tel:+27798803286" class="contact-item">
+                            <span class="contact-icon">☎</span>
+                            <div class="contact-info">
+                                <span class="contact-label">Phone</span>
+                                <span class="contact-value">079 880 3286</span>
+                            </div>
+                        </a>
+                        <div class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <div class="contact-info">
+                                <span class="contact-label">Location</span>
+                                <span class="contact-value">14 10th Street, Greymont<br>Johannesburg, South Africa</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-cta">
+                    <div class="cta-card">
+                        <h3 class="cta-title">Ready to collaborate?</h3>
+                        <p class="cta-text">Available for full-time roles, freelance projects, and consulting opportunities.</p>
+                        <a href="mailto:Brendonclark4@gmail.com" class="btn btn-primary btn-large">Start a Conversation</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="footer-logo">BC</span>
+                    <p class="footer-tagline">Software Developer</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#projects">Projects</a>
+                </div>
+                <div class="footer-social">
+                    <a href="mailto:Brendonclark4@gmail.com" aria-label="Email">✉</a>
+                    <a href="tel:+27798803286" aria-label="Phone">☎</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Brendon Clark. All rights reserved.</p>
+                <p class="footer-credit">Built with passion in Johannesburg 🇿🇦</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
