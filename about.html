@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me | Brendon Clark</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">B.</a>
+            <div class="nav-links">
+                <a href="about.html">About</a>
+                <a href="index.html#experience">Experience</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="Brendon_Clark_CV.pdf" download class="nav-download">Download CV</a>
+                <a href="contact.html" class="nav-cta">Contact</a>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menu">
+                <svg class="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <line x1="4" y1="6" x2="20" y2="6"></line>
+                    <line x1="4" y1="12" x2="20" y2="12"></line>
+                    <line x1="4" y1="18" x2="20" y2="18"></line>
+                </svg>
+                <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="about.html">About</a>
+            <a href="index.html#experience">Experience</a>
+            <a href="index.html#skills">Skills</a>
+            <a href="Brendon_Clark_CV.pdf" download>Download CV</a>
+            <a href="contact.html" class="mobile-cta">Contact</a>
+        </div>
+    </nav>
+
+    <!-- About Header -->
+    <section class="about-header-section">
+        <div class="about-header-content">
+            <span class="section-tag">About Me</span>
+            <h1 class="about-main-title">Hello, I'm Brendon</h1>
+            <p class="about-header-text">
+                A passionate software developer dedicated to crafting exceptional digital experiences 
+                and robust enterprise solutions.
+            </p>
+        </div>
+    </section>
+
+    <!-- About Bento Grid -->
+    <section class="about-bento-section">
+        <div class="about-bento-grid">
+            
+            <!-- Story Card -->
+            <div class="about-bento-card story-card">
+                <div class="card-header">
+                    <span class="card-tag">My Story</span>
+                </div>
+                <h2 class="card-title">Code is my craft.<br>Impact is my goal.</h2>
+                <div class="story-content">
+                    <p class="story-text">
+                        With 7+ years of experience in software development, I've had the privilege of working 
+                        across banking, insurance, and ERP systems. My journey began at Transaction Capital, 
+                        where I built enterprise applications that powered critical business operations.
+                    </p>
+                    <p class="story-text">
+                        At Altron NuPay, I specialized in CRM/ERP solutions using the OFBIZ Framework, 
+                        implementing payment processing systems that handled millions in transactions.
+                    </p>
+                    <p class="story-text">
+                        Today, at FNB Life Insurance, I lead omni-channel development—architecting solutions 
+                        that serve customers across mobile, web, branch, and USSD channels. Every line of code 
+                        I write is driven by the desire to solve real problems and create meaningful impact.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Values Card -->
+            <div class="about-bento-card values-card">
+                <div class="card-header">
+                    <span class="card-tag">What I Bring</span>
+                </div>
+                <div class="values-list">
+                    <div class="value-item">
+                        <span class="value-num">01</span>
+                        <div class="value-info">
+                            <h4>Technical Excellence</h4>
+                            <p>Deep expertise in Java, Spring Boot, and enterprise architecture</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-num">02</span>
+                        <div class="value-info">
+                            <h4>Business Understanding</h4>
+                            <p>Translating complex requirements into elegant solutions</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-num">03</span>
+                        <div class="value-info">
+                            <h4>Omni-Channel Expertise</h4>
+                            <p>Seamless experiences across web, mobile, and branch</p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <span class="value-num">04</span>
+                        <div class="value-info">
+                            <h4>Proven Track Record</h4>
+                            <p>WOW Award winner, consistently exceeding expectations</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- How I Work Card -->
+            <div class="about-bento-card work-style-card">
+                <div class="card-header">
+                    <span class="card-tag">How I Work</span>
+                </div>
+                <div class="work-principles">
+                    <div class="principle">
+                        <div class="principle-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 6v6l4 2"></path>
+                            </svg>
+                        </div>
+                        <div class="principle-content">
+                            <h4>Understanding First</h4>
+                            <p>Before writing code, I ensure I fully grasp business requirements</p>
+                        </div>
+                    </div>
+                    <div class="principle">
+                        <div class="principle-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="9" cy="7" r="4"></circle>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                            </svg>
+                        </div>
+                        <div class="principle-content">
+                            <h4>Collaborative</h4>
+                            <p>Working closely with stakeholders and teams at every stage</p>
+                        </div>
+                    </div>
+                    <div class="principle">
+                        <div class="principle-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                        <div class="principle-content">
+                            <h4>Quality Focused</h4>
+                            <p>Testing is integral, not an afterthought</p>
+                        </div>
+                    </div>
+                    <div class="principle">
+                        <div class="principle-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                                <path d="M2 17l10 5 10-5"></path>
+                                <path d="M2 12l10 5 10-5"></path>
+                            </svg>
+                        </div>
+                        <div class="principle-content">
+                            <h4>Always Learning</h4>
+                            <p>Staying current with industry best practices</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Looking For Card -->
+            <div class="about-bento-card looking-for-card">
+                <div class="card-header">
+                    <span class="card-tag">What I'm Looking For</span>
+                </div>
+                <ul class="looking-list">
+                    <li>
+                        <span class="check-icon">✓</span>
+                        <span>Challenging projects that push technical boundaries</span>
+                    </li>
+                    <li>
+                        <span class="check-icon">✓</span>
+                        <span>Talented teams who value quality and innovation</span>
+                    </li>
+                    <li>
+                        <span class="check-icon">✓</span>
+                        <span>Meaningful impact on users and businesses</span>
+                    </li>
+                    <li>
+                        <span class="check-icon">✓</span>
+                        <span>Growth opportunities and knowledge sharing</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Stats Row -->
+            <div class="about-stats-row">
+                <div class="about-stat-card">
+                    <span class="about-stat-value">7+</span>
+                    <span class="about-stat-label">Years Experience</span>
+                </div>
+                <div class="about-stat-card">
+                    <span class="about-stat-value">3</span>
+                    <span class="about-stat-label">Major Companies</span>
+                </div>
+                <div class="about-stat-card">
+                    <span class="about-stat-value">★</span>
+                    <span class="about-stat-label">WOW Award</span>
+                </div>
+                <div class="about-stat-card">
+                    <span class="about-stat-value">Full</span>
+                    <span class="about-stat-label">Stack Capable</span>
+                </div>
+            </div>
+
+            <!-- CTA Card -->
+            <div class="about-bento-card cta-card-full">
+                <div class="cta-card-content">
+                    <h3>Let's work together</h3>
+                    <p>Whether you're looking for a full-time team member, freelance developer, or consultant—I'd love to discuss how we can collaborate.</p>
+                    <div class="cta-actions">
+                        <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+                        <a href="index.html" class="btn btn-secondary">Back to Home</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">B.</span>
+                <span class="footer-tagline">Software Developer</span>
+            </div>
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="index.html#experience">Experience</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Brendon Clark. All rights reserved.</p>
+            <p>Built with passion in Johannesburg 🇿🇦</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            mobileMenu.classList.toggle('active');
+            menuBtn.classList.toggle('active');
+        }
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            if (!mobileMenu.contains(event.target) && !menuBtn.contains(event.target)) {
+                mobileMenu.classList.remove('active');
+                menuBtn.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

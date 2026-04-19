@@ -16,15 +16,26 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ===== Mobile Menu Toggle =====
-const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-const navLinks = document.querySelector('.nav-links');
-
-if (mobileMenuBtn) {
-    mobileMenuBtn.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
+function toggleMobileMenu() {
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    
+    if (mobileMenu) {
+        mobileMenu.classList.toggle('active');
         mobileMenuBtn.classList.toggle('active');
-    });
+    }
 }
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', (e) => {
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    
+    if (mobileMenu && !mobileMenu.contains(e.target) && !mobileMenuBtn.contains(e.target)) {
+        mobileMenu.classList.remove('active');
+        mobileMenuBtn.classList.remove('active');
+    }
+});
 
 // ===== Skill Bars Animation =====
 const animateSkillBars = () => {
@@ -70,12 +81,15 @@ let lastScroll = 0;
 
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
     
     // Add/remove scrolled class for background
     if (currentScroll > 50) {
-        nav.style.background = 'rgba(10, 10, 10, 0.95)';
+        nav.style.background = isDark ? 'rgba(18, 18, 26, 0.98)' : 'rgba(255, 255, 255, 0.98)';
+        nav.style.boxShadow = isDark ? '0 2px 20px rgba(0, 0, 0, 0.3)' : '0 2px 20px rgba(0, 0, 0, 0.05)';
     } else {
-        nav.style.background = 'rgba(10, 10, 10, 0.8)';
+        nav.style.background = isDark ? 'rgba(18, 18, 26, 0.8)' : 'rgba(255, 255, 255, 0.8)';
+        nav.style.boxShadow = 'none';
     }
     
     lastScroll = currentScroll;
@@ -123,25 +137,35 @@ if (codeContent) {
     }, 500);
 }
 
-// ===== Contact Form Handling (if added later) =====
-const contactForm = document.querySelector('.contact-form');
-if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
-        
-        // Show success message
-        const btn = contactForm.querySelector('button[type="submit"]');
-        const originalText = btn.textContent;
-        btn.textContent = 'Message Sent!';
-        btn.disabled = true;
-        
-        setTimeout(() => {
-            btn.textContent = originalText;
-            btn.disabled = false;
-            contactForm.reset();
-        }, 3000);
-    });
+// Note: Contact form uses FormSubmit.co for email delivery
+
+// ===== Theme Toggle Function =====
+function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+    
+    // Update nav background
+    const nav = document.querySelector('.nav');
+    const currentScroll = window.pageYOffset;
+    
+    if (currentScroll > 50) {
+        nav.style.background = newTheme === 'dark' ? 'rgba(18, 18, 26, 0.98)' : 'rgba(255, 255, 255, 0.98)';
+    } else {
+        nav.style.background = newTheme === 'dark' ? 'rgba(18, 18, 26, 0.8)' : 'rgba(255, 255, 255, 0.8)';
+    }
 }
+
+// ===== Initialize Theme on Load =====
+(function() {
+    const savedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const theme = savedTheme || (prefersDark ? 'dark' : 'light');
+    
+    document.documentElement.setAttribute('data-theme', theme);
+})();
 
 // ===== Preload Fonts =====
 const preloadFonts = () => {
@@ -166,6 +190,49 @@ document.addEventListener('DOMContentLoaded', () => {
     document.body.classList.add('loaded');
 });
 
+// ===== Theme Toggle =====
+const initTheme = () => {
+    // Check for saved theme preference or default to light
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+    
+    // Create theme toggle button
+    const themeToggle = document.createElement('div');
+    themeToggle.className = 'theme-toggle';
+    themeToggle.innerHTML = `
+        <button class="theme-toggle-btn" aria-label="Toggle theme">
+            <span class="theme-icon sun">☀️</span>
+            <span class="theme-icon moon">🌙</span>
+        </button>
+    `;
+    document.body.appendChild(themeToggle);
+    
+    // Add click handler
+    themeToggle.querySelector('.theme-toggle-btn').addEventListener('click', () => {
+        const currentTheme = document.documentElement.getAttribute('data-theme');
+        const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+        
+        document.documentElement.setAttribute('data-theme', newTheme);
+        localStorage.setItem('theme', newTheme);
+        
+        // Update nav background for dark mode
+        updateNavBackground();
+    });
+};
+
+// Update nav background based on theme and scroll
+const updateNavBackground = () => {
+    const nav = document.querySelector('.nav');
+    const currentScroll = window.pageYOffset;
+    const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+    
+    if (currentScroll > 50) {
+        nav.style.background = isDark ? 'rgba(18, 18, 26, 0.98)' : 'rgba(255, 255, 255, 0.98)';
+    } else {
+        nav.style.background = isDark ? 'rgba(18, 18, 26, 0.8)' : 'rgba(255, 255, 255, 0.8)';
+    }
+};
+
 // ===== Performance: Debounce Scroll Events =====
 function debounce(func, wait) {
     let timeout;
@@ -181,7 +248,10 @@ function debounce(func, wait) {
 
 // Apply debounce to scroll handler
 const debouncedScroll = debounce(() => {
-    // Scroll-based animations can go here
+    updateNavBackground();
 }, 16);
 
 window.addEventListener('scroll', debouncedScroll);
+
+// Initialize theme on load
+initTheme();

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Brendon Clark</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">B.</a>
+            <div class="nav-links">
+                <a href="about.html">About</a>
+                <a href="index.html#experience">Experience</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="Brendon_Clark_CV.pdf" download class="nav-download">Download CV</a>
+                <a href="contact.html" class="nav-cta">Contact</a>
+            </div>
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Menu">
+                <svg class="menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <line x1="4" y1="6" x2="20" y2="6"></line>
+                    <line x1="4" y1="12" x2="20" y2="12"></line>
+                    <line x1="4" y1="18" x2="20" y2="18"></line>
+                </svg>
+                <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="about.html">About</a>
+            <a href="index.html#experience">Experience</a>
+            <a href="index.html#skills">Skills</a>
+            <a href="Brendon_Clark_CV.pdf" download>Download CV</a>
+            <a href="contact.html" class="mobile-cta">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Contact Header -->
+    <section class="contact-header-section">
+        <div class="contact-header-content">
+            <span class="section-tag">Get In Touch</span>
+            <h1 class="contact-main-title">Let's Work Together</h1>
+            <p class="contact-header-text">
+                Have a project in mind or want to discuss opportunities? 
+                I'm always open to hearing about new challenges.
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Bento Grid -->
+    <section class="contact-bento-section">
+        <div class="contact-bento-grid">
+            
+            <!-- Map Card -->
+            <div class="contact-bento-card map-card">
+                <div class="map-container">
+                    <div class="map-placeholder">
+                        <div class="map-pin">
+                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"></path>
+                                <circle cx="12" cy="9" r="2.5"></circle>
+                            </svg>
+                        </div>
+                        <p class="map-label">Johannesburg, South Africa</p>
+                        <p class="map-address">14 10th Street, Greymont</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form Card -->
+            <div class="contact-bento-card form-card">
+                <div class="card-header">
+                    <span class="card-tag">Send a Message</span>
+                </div>
+                <form id="contactForm" class="contact-bento-form" action="https://formsubmit.co/Brendonclark4@gmail.com" method="POST">
+                    <input type="hidden" name="_subject" value="New Contact Form Submission - Portfolio">
+                    <input type="hidden" name="_next" value="https://brendon-portfolio-lime.vercel.app/contact.html?submitted=true">
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="john@example.com">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Subject *</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Select a subject</option>
+                            <option value="job-opportunity">Job Opportunity</option>
+                            <option value="freelance-project">Freelance Project</option>
+                            <option value="consulting">Consulting</option>
+                            <option value="collaboration">Collaboration</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Your Message *</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project or opportunity..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary btn-full">
+                        Send Message
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13"></line>
+                            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                        </svg>
+                    </button>
+                </form>
+
+                <div id="formSuccess" class="form-success-message" style="display: none;">
+                    <div class="success-icon-large">✓</div>
+                    <h3>Message Sent!</h3>
+                    <p>Thank you for reaching out. I'll get back to you within 24 hours.</p>
+                    <a href="index.html" class="btn btn-secondary">Back to Home</a>
+                </div>
+            </div>
+
+            <!-- Email Card -->
+            <div class="contact-bento-card info-card-small">
+                <div class="contact-info-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                        <polyline points="22,6 12,13 2,6"></polyline>
+                    </svg>
+                </div>
+                <h4 class="contact-info-title">Email</h4>
+                <a href="mailto:Brendonclark4@gmail.com" class="contact-info-link">Brendonclark4@gmail.com</a>
+            </div>
+
+            <!-- Phone Card -->
+            <div class="contact-bento-card info-card-small">
+                <div class="contact-info-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                    </svg>
+                </div>
+                <h4 class="contact-info-title">Phone</h4>
+                <a href="tel:+27798803286" class="contact-info-link">+27 79 880 3286</a>
+            </div>
+
+            <!-- Location Card -->
+            <div class="contact-bento-card info-card-small">
+                <div class="contact-info-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"></path>
+                        <circle cx="12" cy="9" r="2.5"></circle>
+                    </svg>
+                </div>
+                <h4 class="contact-info-title">Location</h4>
+                <p class="contact-info-text">Johannesburg, SA</p>
+            </div>
+
+            <!-- Availability Card -->
+            <div class="contact-bento-card info-card-small">
+                <div class="contact-info-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+                <h4 class="contact-info-title">Availability</h4>
+                <p class="contact-info-text">Open to opportunities</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="footer-logo">B.</span>
+                <span class="footer-tagline">Software Developer</span>
+            </div>
+            <div class="footer-links">
+                <a href="about.html">About</a>
+                <a href="index.html#experience">Experience</a>
+                <a href="index.html#skills">Skills</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Brendon Clark. All rights reserved.</p>
+            <p>Built with passion in Johannesburg 🇿🇦</p>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            mobileMenu.classList.toggle('active');
+            menuBtn.classList.toggle('active');
+        }
+        
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const menuBtn = document.querySelector('.mobile-menu-btn');
+            if (!mobileMenu.contains(event.target) && !menuBtn.contains(event.target)) {
+                mobileMenu.classList.remove('active');
+                menuBtn.classList.remove('active');
+            }
+        });
+
+        // Check if form was submitted
+        if (window.location.search.includes('submitted=true')) {
+            document.getElementById('contactForm').style.display = 'none';
+            document.getElementById('formSuccess').style.display = 'flex';
+        }
+    </script>
+</body>
+</html>
